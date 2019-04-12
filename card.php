@@ -36,7 +36,7 @@ for($x = 0; $x < $count; $x++){
 $str = file_get_contents("http://namegenerators.org/fake-name-generator-us/");
 $var = '/<div class="col2">(.*?)<\/div>/s';
 preg_match_all($var, $str, $matches);
-echo $cyan . "\n $$$$$$$$$$$$$$$ MORE INFORMATION $$$$$$$$$$$$$$$\n";
+echo $cyan . "\n $$$$$$$$$$$$$$$ USER INFORMATION $$$$$$$$$$$$$$$\n";
 echo $bold . $yellow . "[name : ".str_replace("</span>", "", str_replace('<span class="name">', "", $matches[1][3]))."]".
                 " [address : ".$matches[1][8]."]".
                 " [phone : ".$matches[1][9]."]\n";
